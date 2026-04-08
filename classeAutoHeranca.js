@@ -9,7 +9,7 @@ class Automovel{
 
     }
 }
- class Carro extends Automovel{
+ class Moto extends Automovel{
     constructor(marca, modelo, ano, cilindrada){
         super(marca, modelo, ano);
          this.cilindrada = cilindrada;
@@ -17,6 +17,13 @@ class Automovel{
     exibirDetalhes(){
         return ` ${super.exibirDetalhes()}, cinlindrada: ${this.cilindrada};`
     } 
+}
+
+class Carro extends Automovel{
+    constructor(marca, modelo, ano, porta){
+        super(marca, modelo, ano);
+         this.porta = porta;
+    }
 }
 let moto1 = new Moto("Honda","CBX 250 - TWISTER", 2007, 249);
 console.log(moto1.exibirDetalhes());
