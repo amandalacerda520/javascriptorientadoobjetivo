@@ -25,18 +25,23 @@ class Aluno {
     }
 
     exibirRelatorio() {
+        console.log(`===========================`);
         console.log(`Relatório do aluno: ${this.nome}`);
         console.log(`Matrícula: ${this.matricula}`);
         console.log(`Média final: ${this.calculaMedia().toFixed(2)}`);
         console.log(`Status: ${this.obterStatus()}`);
+        console.log(`=================================`)
     }
 }
 
-// Testando os objetos
-let aluno1 = new Aluno("Ana", 5050, [8.0, 7.3, 9.0]);
-aluno1.exibirRelatorio();
+let turma = [
+    new Aluno("Luiz", "CGM5050", [7.2, 6.5, 7.2]),
+    new Aluno("Mariana", "CGM5050", [7.8, 7.1, 9.2]),
+    new Aluno("Maria Luiza", "CGM5050", [3.9, 7.5, 9.2]),
+    new Aluno("Gabriel", "CGM5050", [7.2, 7.8, 8.2]),
+]
 
-let aluno2 = new Aluno("Luiz", 850650, [7.2, 6.5, 3.3]);
-aluno2.exibirRelatorio();
-
-
+console.log(turma[1]);
+for (let i = 0; i < turma.length; i++){
+    turma[i].exibirRelatorio();
+}
